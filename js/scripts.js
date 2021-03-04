@@ -11,7 +11,7 @@ map.on('style.load', function () {
   // add a geojson source
   map.addSource('open-restaurants', {
     type: 'geojson',
-    data: 'data/bk_qns_open_mini.geojson'
+    data: 'data/bk-qns-open-mini.geojson'
   });
 
   // add a layer to style and display the source
