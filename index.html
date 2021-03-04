@@ -4,14 +4,35 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My First MapboGL Map</title>
+  <title>Brooklyn/Queens Restaurant Map</title>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 
 <body>
   <div class='container'>
-    <div id='sidebar'>SIDEBAR</div>
+    <div id='sidebar'>
+        <h1>Brooklyn and Queens <br/>
+        Restaurant Map</h1>
+
+      <p class = "instructions">  Zoom in to a neighborhood an hover over a lot to view restaurant information. </p> </br>
+<img src = "https://www1.nyc.gov/html/dot/images/pedestrians/openstreets-restaurants-vanderbilt-bk.jpg">
+
+
+        <br></br>
+
+<p class = "disclaimer"> Note that "both" under Open Restaurant Seating Type means both roadway and sidewalk seating. </p>
+<br></br>
+<br></br>
+<br></br>
+
+
+
+
+<footer>Data retrieved from <a href ="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">
+  DOHMH New York City Restaurant Inspection Results </a>
+and <a href = "https://data.cityofnewyork.us/Transportation/Open-Restaurants-Inspections/4dx7-axux">Open Restaurants Inspections</a> </footer>
+    </div>
     <div id='mapContainer'>MAP</div>
   </div>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>

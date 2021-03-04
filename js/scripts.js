@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoianA1NDg1IiwiYSI6ImNrM2Y3bTN5cDAxemEzaG5ubjM1N
 
 var map = new mapboxgl.Map({
   container: 'mapContainer', // container ID
-  style: 'mapbox://styles/mapbox/light-v10', // style URL
+  style: 'mapbox://styles/mapbox/dark-v10', // style URL
   center: [-73.916949,40.682562], // starting position [lng, lat]
   zoom: 11 // starting zoom
 });
@@ -31,7 +31,7 @@ map.on('style.load', function () {
           ],
           [
             'American',
-            "#93828E",
+            "white",
           ],
           [
             'Jewish/Kosher',
@@ -402,13 +402,13 @@ map.on('mousemove', function (e) {
     var openrest = hoveredFeature.properties.Open_Restaurants_Inspections_SeatingChoice
 
     var popupContent = `
-      <div>
-        <b>Restaurant Name</b>: ${rest_name}<br/>
-        <b>Type of Cuisine</b>: ${cuisineDescription} <br/>
-        <b>Address</b>: ${address}, ${boro},NY   ${zipcode}<br/>
-        <b>Phone</b>: ${phonenumber}<br/>
-        <b>Health Grade</b>: ${grade}<br/>
-        <b>Open Restaurant Seating Type</b>: ${openrest}
+      <div >
+            <b>Restaurant Name</b>: ${rest_name}<br/>
+            <b>Type of Cuisine</b>: ${cuisineDescription} <br/>
+            <b>Address</b>: ${address}, ${boro},NY   ${zipcode}<br/>
+            <b>Phone</b>: ${phonenumber}<br/>
+            <b>Health Grade</b>: ${grade}<br/>
+            <b>Open Restaurant Seating Type</b>: ${openrest}
 
 
       </div>
