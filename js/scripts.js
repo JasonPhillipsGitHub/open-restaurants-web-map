@@ -133,287 +133,287 @@ map.on('style.load', function () {
           ],
           [
             'Sandwiches',
-            "#f0a607",
+            "#DDD598",
           ],
           [
             'Mexican',
-            "#f0a607",
+            "#20AF94",
           ],
           [
             'Asian',
-            "#f0a607",
+            "#98B115",
           ],
           [
             'Sandwiches/Salads/Mixed Buffet',
-            "#f0a607",
+            "#41D8E9",
           ],
           [
             'Brazilian',
-            "#f0a607",
+            "#EEE281",
           ],
           [
             'Thai',
-            "#f0a607",
+            "#5FADE9",
           ],
           [
             'Chicken',
-            "#f0a607",
+            "#52A611",
           ],
           [
             'Peruvian',
-            "#f0a607",
+            "#054054",
           ],
           [
             'French',
-            "#f0a607",
+            "#E559BE",
           ],
           [
             'Caribbean (Inc. Cuban, Puerto Rican)',
-            "#f0a607",
+            "#4606CD",
           ],
           [
             'Spanish',
-            "#f0a607",
+            "#476BEE",
           ],
           [
             'Donuts',
-            "#f0a607",
+            "#B2DBB1",
           ],
           [
             'Vegetarian',
-            "#f0a607",
+            "#EFE193",
           ],
           [
             'Korean',
-            "#f0a607",
+            "#D397BD",
           ],
           [
             'Seafood',
-            "#f0a607",
+            "#B5885D",
           ],
           [
             'Other',
-            "#f0a607",
+            "#A6B808",
           ],
           [
             'Turkish',
-            "#f0a607",
+            "#572628",
           ],
           [
             'Irish',
-            "#f0a607",
+            "#10CB90",
           ],
           [
             'Bottled beverages, including water, sodas, juices, etc.',
-            "#f0a607",
+            "#949459",
           ],
           [
             'Californian',
-            "#f0a607",
+            "#12427C",
           ],
           [
             'Middle Eastern',
-            "#f0a607",
+            "#C32A8E",
           ],
           [
             'Soul Food',
-            "#f0a607",
+            "#E805A2",
           ],
           [
             'Chinese/Japanese',
-            "#f0a607",
+            "#2F9E6C",
           ],
           [
             'Juice, Smoothies, Fruit Salads',
-            "#f0a607",
+            "#0A8ACE",
           ],
           [
             'Steak',
-            "#f0a607",
+            "#1F03DE",
           ],
           [
             'Ice Cream, Gelato, Yogurt, Ices',
-            "#f0a607",
+            "#2F790F",
           ],
           [
             'African',
-            "#f0a607",
+            "#72B2B4",
           ],
           [
             'Hamburgers',
-            "#f0a607",
+            "#9FBFC1",
           ],
           [
             'Vietnamese/Cambodian/Malaysia',
-            "#f0a607",
+            "#11C933",
           ],
           [
             'Eastern European',
-            "#f0a607",
+            "#30A83C",
           ],
           [
             'Salads',
-            "#f0a607",
+            "#1AD21F",
           ],
           [
             'Creole',
-            "#f0a607",
+            "#5961D8",
           ],
           [
             'Russian',
-            "#f0a607",
+            "#9A77A3",
           ],
           [
             'Barbecue',
-            "#f0a607",
+            "#81E4D4",
           ],
           [
             'Afghan',
-            "#f0a607",
+            "#2FEB24",
           ],
           [
             'Mediterranean',
-            "#f0a607",
+            "#CE7BC4",
           ],
           [
             'Pancakes/Waffles',
-            "#f0a607",
+            "#651DF3",
           ],
           [
             'Armenian',
-            "#f0a607",
+            "#9EFBB3",
           ],
           [
             'Hotdogs/Pretzels',
-            "#f0a607",
+            "#942CBF",
           ],
           [
             'Continental',
-            "#f0a607",
+            "#5BA653",
           ],
           [
             'Soups/Salads/Sandwiches',
-            "#f0a607",
+            "#90D36C",
           ],
           [
             'Hawaiian',
-            "#f0a607",
+            "#16B5C3",
           ],
           [
             'Chilean',
-            "#f0a607",
+            "#6122F7",
           ],
           [
             'Tapas',
-            "#f0a607",
+            "#63B92D",
           ],
           [
             'Australian',
-            "#f0a607",
+            "#DF3705",
           ],
           [
             'Bagels/Pretzels',
-            "#f0a607",
+            "#69EBC1",
           ],
           [
             'Portuguese',
-            "#f0a607",
+            "#9A60D4",
           ],
           [
             'Cajun',
-            "#f0a607",
+            "#90433F",
           ],
           [
             'Ethiopian',
-            "#f0a607",
+            "#F9B272",
           ],
           [
             'Greek',
-            "#f0a607",
+            "#4DD17D",
           ],
           [
             'Filipino',
-            "#f0a607",
+            "#B46D7F",
           ],
           [
             'Nuts/Confectionary',
-            "#f0a607",
+            "#A862EF",
           ],
           [
             'English',
-            "#f0a607",
+            "#4C3615",
           ],
           [
             'Polish',
-            "#f0a607",
+            "#4A2975",
           ],
           [
             'Fruits/Vegetables',
-            "#f0a607",
+            "#A5EAF7",
           ],
           [
             'Pakistani',
-            "#f0a607",
+            "#73970D",
           ],
           [
             'Indonesian',
-            "#f0a607",
+            "#AA3DB5",
           ],
           [
             'German',
-            "#f0a607",
+            "#735B5D",
           ],
           [
             'Bangladeshi',
-            "#f0a607",
+            "#1BD84B",
           ],
           [
             'Egyptian',
-            "#f0a607",
+            "#22AFE6",
           ],
           [
             'Chinese/Cuban',
-            "#f0a607",
+            "#54F2DC",
           ],
           [
             'Scandinavian',
-            "#f0a607",
+            "#37177C",
           ],
           [
             'Iranian',
-            "#f0a607",
+            "#63EDE4",
           ],
           [
             'Moroccan',
-            "#f0a607",
+            "#42B5DF",
           ],
           [
             'Not Listed/Not Applicable',
-            "#f0a607",
+            "#5D3780",
           ],
           [
             'Creole/Cajun',
-            "#f0a607",
+            "#67C2D6",
           ],
           [
             'Czech',
-            "#f0a607",
+            "#2A4464",
           ],
           [
             'Soups',
-            "#f0a607",
+            "#18A2F3",
           ],
           [
             'Hotdogs',
-            "#f0a607",
+            "#B6C858",
           ],
           [
             'Southwestern',
-            "#f0a607",
+            "#2221CE",
           ],
           [
             'Basque',
-            "#f0a607",
+            "#5259D2",
           ],
         ]
       },
