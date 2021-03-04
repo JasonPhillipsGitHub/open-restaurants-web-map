@@ -1,74 +1,4 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoianA1NDg1IiwiYSI6ImNrM2Y3bTN5cDAxemEzaG5ubjM1NHpzdXIifQ.1ZnEtqoWaJQRTjp7E2GgGA';
-// function to translate NYC land use codes into a color and a description
-// var CuisineLookup = (code) => {
-//   switch (code) {
-//     case 1:
-//       return {
-//         color: '#f4f455',
-//         description: '1 & 2 Family',
-//       };
-//     case 2:
-//       return {
-//         color: '#f7d496',
-//         description: 'Multifamily Walk-up',
-//       };
-//     case 3:
-//       return {
-//         color: '#FF9900',
-//         description: 'Multifamily Elevator',
-//       };
-//     case 4:
-//       return {
-//         color: '#f7cabf',
-//         description: 'Mixed Res. & Commercial',
-//       };
-//     case 5:
-//       return {
-//         color: '#ea6661',
-//         description: 'Commercial & Office',
-//       };
-//     case 6:
-//       return {
-//         color: '#d36ff4',
-//         description: 'Industrial & Manufacturing',
-//       };
-//     case 7:
-//       return {
-//         color: '#dac0e8',
-//         description: 'Transportation & Utility',
-//       };
-//     case 8:
-//       return {
-//         color: '#5CA2D1',
-//         description: 'Public Facilities & Institutions',
-//       };
-//     case 9:
-//       return {
-//         color: '#8ece7c',
-//         description: 'Open Space & Outdoor Recreation',
-//       };
-//     case 10:
-//       return {
-//         color: '#bab8b6',
-//         description: 'Parking Facilities',
-//       };
-//     case 11:
-//       return {
-//         color: '#5f5f60',
-//         description: 'Vacant Land',
-//       };
-//     case 12:
-//       return {
-//         color: '#5f5f60',
-//         description: 'Other',
-//       };
-//     default:
-//       return {
-//         color: '#5f5f60',
-//         description: 'Other',
-//       };
-//   }
-// };
 
 var map = new mapboxgl.Map({
   container: 'mapContainer', // container ID
@@ -97,7 +27,7 @@ map.on('style.load', function () {
         stops: [
           [
             'Chinese',
-            "#BBB572",
+            "red",
           ],
           [
             'American',
@@ -462,13 +392,25 @@ map.on('mousemove', function (e) {
     // based on the feature found.
 
     var hoveredFeature = features[0]
-    var address = hoveredFeature.properties.Address
-    var landuseDescription = LandUseLookup(parseInt(hoveredFeature.properties.LandUse)).description
+    var rest_name = hoveredFeature.properties.DBA
+    var cuisineDescription = hoveredFeature.properties.CUISINE_DESCRIPTION
+    var address = hoveredFeature.properties.address
+    var boro = hoveredFeature.properties.BORO
+    var zipcode = hoveredFeature.properties.ZIPCODE
+    var phonenumber = hoveredFeature.properties.PHONE
+    var grade = hoveredFeature.properties.GRADE
+    var openrest = hoveredFeature.properties.Open_Restaurants_Inspections_SeatingChoice
 
     var popupContent = `
       <div>
-        ${address}<br/>
-        ${landuseDescription}
+        <b>Restaurant Name</b>: ${rest_name}<br/>
+        <b>Type of Cuisine</b>: ${cuisineDescription} <br/>
+        <b>Address</b>: ${address}, ${boro},NY   ${zipcode}<br/>
+        <b>Phone</b>: ${phonenumber}<br/>
+        <b>Health Grade</b>: ${grade}<br/>
+        <b>Open Restaurant Seating Type</b>: ${openrest}
+
+
       </div>
     `
 
