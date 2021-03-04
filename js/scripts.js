@@ -429,5 +429,3 @@ map.on('mousemove', function (e) {
   }
 
 })
-
-//test change
