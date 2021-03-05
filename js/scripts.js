@@ -14,7 +14,33 @@ map.on('style.load', function () {
     data: 'data/bk-qns-open-mini.geojson'
   });
 
-  // add a layer to style and display the source
+// add the Layer for the open-restaurants, which the next layer should overlay on top,
+// giving a "hidden" effect
+
+  map.addLayer({
+    'id': 'openrest-fill',
+    'type': 'fill',
+    'source': 'open-restaurants',
+    'layout': {},
+    'paint': {
+      'fill-color': {
+        type: 'categorical',
+        property: 'Open_Restaurants_Inspections_SeatingChoice',
+        stops:
+        [
+          ['sidewalk',
+          'red'],
+          ["roadside",
+        'blue'],
+      ['both',
+    'green']
+            ]
+          }
+        }
+      }
+    );
+
+  // add a layer for cuisine types to style and display the source
   map.addLayer({
     'id': 'restaurants-fill',
     'type': 'fill',
@@ -352,6 +378,9 @@ map.on('style.load', function () {
     }
   });
 
+
+
+
   // add an empty data source, which we will use to highlight the lot the user is hovering over
   map.addSource('highlight-feature', {
     type: 'geojson',
@@ -374,13 +403,6 @@ map.on('style.load', function () {
   });
 
 
-  // Add cuisine types to fill in the dropdown menu
-  var cuisine_type = [1,2,3];
-  var option = '';
-  for (var i=0;i<cuisine_type.length;i++){
-     option += '<option value="'+ cuisine_type[i] + '">' + cuisine_type[i] + '</option>';
-  }
-  $('.dropdown-content').append(option);
 
 })
 
@@ -390,6 +412,24 @@ var popup = new mapboxgl.Popup({
   closeOnClick: false
 });
 
+
+
+$('.dropbtn').on('click', function(){
+  // hide the restaurant-fill-layer on demand
+
+   map.setLayoutProperty('restaurants-fill', 'visibility', 'none');
+
+});
+
+$('.reset').on('click', function(){
+  // hide the restaurant-fill-layer on demand
+
+   map.setLayoutProperty('restaurants-fill', 'visibility', 'visible');
+
+});
+
+
+// Pop up code for the Original Layer
 map.on('mousemove', function (e) {
   // query for the features under the mouse, but only in the lots layer
   var features = map.queryRenderedFeatures(e.point, {
@@ -419,6 +459,58 @@ map.on('mousemove', function (e) {
             <b>Phone</b>: ${phonenumber}<br/>
             <b>Health Grade</b>: ${grade}<br/>
             <b>Open Restaurant Seating Type</b>: ${openrest}
+
+
+      </div>
+    `
+
+    popup.setLngLat(e.lngLat).setHTML(popupContent).addTo(map);
+
+    // set this lot's polygon feature as the data for the highlight source
+    map.getSource('highlight-feature').setData(hoveredFeature.geometry);
+
+    // show the cursor as a pointer
+    map.getCanvas().style.cursor = 'pointer';
+  } else {
+    // remove the Popup
+    popup.remove();
+
+    map.getCanvas().style.cursor = '';
+  }
+
+})
+
+
+// Pop-up Code for the Open Restaurant Layer
+map.on('mousemove', function (e) {
+  // query for the features under the mouse, but only in the lots layer
+  var features = map.queryRenderedFeatures(e.point, {
+      layers: ['openrest-fill'],
+  });
+
+  if (features.length > 0) {
+    // show the popup
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+
+    var hoveredFeature = features[0]
+    var rest_name = hoveredFeature.properties.DBA
+    var cuisineDescription = hoveredFeature.properties.CUISINE_DESCRIPTION
+    var address = hoveredFeature.properties.address
+    var boro = hoveredFeature.properties.BORO
+    var zipcode = hoveredFeature.properties.ZIPCODE
+    var phonenumber = hoveredFeature.properties.PHONE
+    var grade = hoveredFeature.properties.GRADE
+    var openrest = hoveredFeature.properties.Open_Restaurants_Inspections_SeatingChoice
+
+    var popupContent = `
+      <div >
+            <b>Restaurant Name</b>: ${rest_name}<br/>
+            <b>Type of Cuisine</b>: ${cuisineDescription} <br/>
+            <b>Address</b>: ${address}, ${boro},NY   ${zipcode}<br/>
+            <b>Phone</b>: ${phonenumber}<br/>
+            <b>Health Grade</b>: ${grade}<br/>
+            <b class = "open_status">Open Restaurant Seating Type</b>: ${openrest}
 
 
       </div>
