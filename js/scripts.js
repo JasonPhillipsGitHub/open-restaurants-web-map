@@ -372,6 +372,16 @@ map.on('style.load', function () {
       'line-color': 'white',
     }
   });
+
+
+  // Add cuisine types to fill in the dropdown menu
+  var cuisine_type = [1,2,3];
+  var option = '';
+  for (var i=0;i<cuisine_type.length;i++){
+     option += '<option value="'+ cuisine_type[i] + '">' + cuisine_type[i] + '</option>';
+  }
+  $('.dropdown-content').append(option);
+
 })
 
 // Create a popup, but don't add it to the map yet.
