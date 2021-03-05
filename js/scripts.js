@@ -30,7 +30,7 @@ map.on('style.load', function () {
         [
           ['sidewalk',
           'red'],
-          ["roadside",
+          ["roadway",
         'blue'],
       ['both',
     'green']
